@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circle Goal</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                gray: '#aaaaaa',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+
+  <div class="fixed inset-0 flex items-center justify-center text-center" id="nameScreen">
+    <div class="bg-gray max-w-md w-full">
+      <p class="text-4xl pb-6 py-6">Enter Your Name</p>
+      <div class="pb-6">
+          <input type="text" class="bg-white py-3 px-6" id="nameInput"></input>
+          <button class="py-3 px-3 border-2" id="submitButton">Submit</button> 
+      </div>
+    </div>
+  </div>
+
+    <div class="fixed inset-0 flex items-center justify-center text-center" id="restartScreen">
+        <div class="bg-gray max-w-md w-full p-6">
+            <p class="text-4xl mb-6" id="restartScreenText">Name Won!!</p>
+            <div>
+                <button class="bg-red-400 w-full py-3" id="restartGameButton">Restart game</button>
+            </div>
+        </div>
+    </div>
+
+    <canvas></canvas>
+    <script src="canvas.js"></script>
+</body>
+</html>
